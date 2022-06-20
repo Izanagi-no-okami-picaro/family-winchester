@@ -26,8 +26,7 @@ object form_principal: Tform_principal
     Width = 61
     Height = 21
     TabOrder = 1
-    OnChange = nota1Change
-    OnExit = btn_calcularClick
+    OnExit = nota1Exit
   end
   object nota2: TEdit
     Left = 7
@@ -35,8 +34,7 @@ object form_principal: Tform_principal
     Width = 61
     Height = 21
     TabOrder = 2
-    OnChange = nota2Change
-    OnExit = btn_calcularClick
+    OnExit = nota2Exit
   end
   object nota3: TEdit
     Left = 7
@@ -44,8 +42,7 @@ object form_principal: Tform_principal
     Width = 61
     Height = 21
     TabOrder = 3
-    OnChange = nota3Change
-    OnExit = btn_calcularClick
+    OnExit = nota3Exit
   end
   object nota4: TEdit
     Left = 7
@@ -53,8 +50,7 @@ object form_principal: Tform_principal
     Width = 61
     Height = 21
     TabOrder = 4
-    OnChange = nota4Change
-    OnExit = btn_calcularClick
+    OnExit = nota4Exit
   end
   object btn_calcular: TButton
     Left = 74
@@ -64,6 +60,5 @@ object form_principal: Tform_principal
     Caption = 'Calcular'
     TabOrder = 5
     OnClick = btn_calcularClick
-    OnExit = btn_calcularClick
   end
 end

@@ -14,11 +14,16 @@ type
     nota3: TEdit;
     nota4: TEdit;
     btn_calcular: TButton;
-    procedure btn_calcularClick(Sender: TObject);
+    procedure btn_calculaClick(Sender: TObject);
     procedure nota1Change(Sender: TObject);
     procedure nota2Change(Sender: TObject);
     procedure nota3Change(Sender: TObject);
     procedure nota4Change(Sender: TObject);
+    procedure nota1Exit(Sender: TObject);
+    procedure nota2Exit(Sender: TObject);
+    procedure nota3Exit(Sender: TObject);
+    procedure nota4Exit(Sender: TObject);
+    procedure btn_calcularClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,7 +37,7 @@ implementation
 
 {$R *.dfm}
 
-procedure Tform_principal.btn_calcularClick(Sender: TObject);
+procedure Tform_principal.btn_calculaClick(Sender: TObject);
 var
   n1,n2,n3,n4,media : Double;
   begin
@@ -83,6 +88,49 @@ begin
       showmessage('sua nota é invalida mermão');
       nota4.SetFocus;
      end;
+end;
+
+procedure Tform_principal.nota1Exit(Sender: TObject);
+begin
+ if strtofloat (nota1.Text) > 10 then
+     begin
+      showmessage('sua nota é invalida');
+      nota1.SetFocus;
+     end;
+end;
+
+procedure Tform_principal.nota2Exit(Sender: TObject);
+begin
+ if strtofloat (nota2.Text) > 10 then
+     begin
+      showmessage('sua nota é invalida');
+      nota2.SetFocus;
+     end;
+end;
+
+
+procedure Tform_principal.nota3Exit(Sender: TObject);
+begin
+ if strtofloat (nota3.Text) > 10 then
+     begin
+      showmessage('sua nota é invalida');
+      nota2.SetFocus;
+     end;
+end;
+
+procedure Tform_principal.nota4Exit(Sender: TObject);
+begin
+ if strtofloat (nota4.Text) > 10 then
+     begin
+      showmessage('sua nota é invalida');
+      nota2.SetFocus;
+     end;
+end;
+
+procedure Tform_principal.btn_calcularClick(Sender: TObject);
+nota1,nota2,nota3,nota4,media:double;
+begin
+
 end;
 
 end.
